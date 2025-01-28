@@ -1,0 +1,40 @@
+import { test, expect } from "@playwright/test";
+
+test("Visible/hidden assertion", async ({ page }) => {
+  await page.goto("https://sripriyakulkarni.com/");
+  await page.locator("text='Automation Practice'").click();
+
+  expect(page.locator("#displayed-text")).toBeVisible();
+
+  await page.locator("#hide-textbox").click();
+  await expect(page.locator("#displayed-text")).toBeHidden();
+  //await page.pause();
+  await page.close();
+});
+
+test("Visible/hidden assertion2", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/add_remove_elements/");
+  await expect(page.locator(".added-manually")).not.toHaveCount(1);
+  await page.locator("text=Add Element").click();
+  await expect(page.locator(".added-manually")).toHaveCount(1);
+  //await page.pause();
+  await page.close();
+});
+
+test("Enable disable assertion", async ({ page }) => {
+  await page.goto("https://letcode.in/buttons");
+  await expect(page.locator("#property")).toBeEnabled();
+
+  await expect(page.locator('[title="Disabled button"]')).toBeDisabled();
+
+  //await page.pause();
+  await page.close();
+});
+
+test("Text march or dismatch", async ({ page }) => {
+  await page.goto("https://letcode.in/buttons");
+  await expect(page.locator("#color")).toHaveText("What is my color?");
+  await expect(page.locator("#color")).not.toHaveText("xxxWhat is my color?");
+  //await page.pause();
+  await page.close();
+});
