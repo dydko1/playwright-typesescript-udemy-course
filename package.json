@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/dydko1/playwright-typesescript-udemy-course#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.50.0",
-    "@types/node": "^22.10.10"
+    "@types/node": "^22.10.10",
+    "ts-node": "^10.9.2"
   }
 }
