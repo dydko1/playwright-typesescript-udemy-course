@@ -13,7 +13,7 @@ test("Login Conduit test using POM", async ({ page }) => {
   await landingPage.navigateTo("https://conduit.bondaracademy.com/");
   await landingPage.clickSignInButton();
   await signInPage.enterEmailId("miroslaw.dyduch@gmail.com");
-  await signInPage.enterPassword("dydko123");
+  await signInPage.enterPassword("dydko1x2x3");
   await signInPage.clickSignInButton();
   await homePage.clickSettingsButton();
   await settingsPage.clickLogoutButton();
