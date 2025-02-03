@@ -4,10 +4,10 @@ pipeline {
       image 'mcr.microsoft.com/playwright:v1.50.1-noble'
     } 
   }
-  environment {
+  stages {
+      environment {
     NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
 }
-  stages {
     stage('install playwright') {
       steps {
         sh '''
