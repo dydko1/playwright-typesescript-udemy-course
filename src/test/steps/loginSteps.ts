@@ -15,7 +15,7 @@ When("I login with valid credrentials", async function () {
   await page
     .locator('//input[@placeholder="Email"]')
     .fill("miroslaw.dyduch@gmail.com");
-  await page.locator('//input[@placeholder="Password"]').fill("dydko1x23xx");
+  await page.locator('//input[@placeholder="Password"]').fill("dydko123");
   await page.locator('button[type="submit"]').click({ delay: 500 });
 });
 
