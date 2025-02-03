@@ -1,11 +1,11 @@
 pipeline {
   agent { 
     docker { 
-      image 'mcr.microsoft.com/playwright:v1.50.1-noble'
+      image 'mcr.microsoft.com/playwright:v1.17.2-focal'
     } 
   }
   environment {
-            HOME = '''${WORKSPACE}'''
+        HOME = '''${WORKSPACE}'''
         // or override npm's cache directory (~/.npm)
         NPM_CONFIG_CACHE = '''${WORKSPACE}/.npm'''
   }
