@@ -1,0 +1,6 @@
+
+https://playwright.dev/docs/docker
+
+docker run -p 3000:3000 --rm --init -it --workdir /home/pwuser --user pwuser mcr.microsoft.com/playwright:v1.50.1-noble /bin/sh -c "npx -y playwright@1.50.1 run-server --port 3000 --host 0.0.0.0"
+
+PW_TEST_CONNECT_WS_ENDPOINT=ws://192.168.10.11:3000/ npx playwright test
