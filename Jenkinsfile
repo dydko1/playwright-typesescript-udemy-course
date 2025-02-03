@@ -9,7 +9,6 @@ pipeline {
       steps {
         sh '''
           ls
-          whoami
           pwd
           npm i -D @playwright/test
           npx playwright install
