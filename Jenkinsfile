@@ -45,3 +45,4 @@ pipeline {
              archiveArtifacts artifacts: "./playwright-report", allowEmptyArchive: false
         }
     }
+    }
